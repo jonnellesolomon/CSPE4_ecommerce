@@ -5,6 +5,12 @@
 
 @section('content')
 
+<ul>
+    @foreach($errors->all() as $message)
+    <li>{{ $message }}</li>
+    @endforeach
+</ul>
+
 <form action="{{ route('products.store') }}" method="POST">
     @csrf 
     <div class="form-group">
